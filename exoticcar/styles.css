@@ -1,0 +1,550 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* @import 'fonts/awesome/scss/font-awesome.scss'; */
+/* // background: linear-gradient(135deg, 
+	// 	rgb(15,15,15) 15%, 
+	// 	rgb(15,15,15) 22%, rgb(16,16,16) 22%, rgb(16,16,16) 29%, 
+	// 	rgb(17,17,17) 29%, rgb(17,17,17) 36%, rgb(18,18,18) 36%,
+	// 	rgb(18,18,18) 43%, rgb(19,19,19) 43%, rgb(19,19,19) 50%,
+	// 	rgb(20,20,20) 57%, rgb(20,20,20) 64%, rgb(21,21,21) 64%, 
+	// 	rgb(21,21,21) 71%, rgb(23,23,23) 71%, rgb(23,23,23) 78%, 
+	// 	rgb(24,24,24) 78%, rgb(24,24,24) 85%,
+	// 	rgb(25,25,25) 85%, rgb(25,25,25) 92%,
+	// 	rgb(26,26,26) 92%, rgb(26,26,26) 100%);  */
+@font-face {
+  font-family: 'Helvetica';
+  src: url("fonts/Helvetica Neue/HelveticaNeue.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url("fonts/Helvetica Neue/HelveticaNeueMedium.ttf");
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url("fonts/Helvetica Neue/HelveticaNeueLightItalic.ttf");
+  font-weight: lighter;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url("fonts/Helvetica Neue/HelveticaNeueLight.ttf");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica';
+  src: url("fonts/Helvetica Neue/HelveticaNeueBold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input + label {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  height: 20px;
+  width: 15px;
+  z-index: 5;
+}
+input + label span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 10px;
+  margin-top: -1px;
+  left: 0;
+  display: block;
+  background: white;
+  transition: .5s;
+}
+input + label span:first-child {
+  top: 3px;
+}
+input + label span:last-child {
+  top: 17px;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+input:checked + label span {
+  opacity: 0;
+  top: 50%;
+}
+input:checked + label span:first-child {
+  opacity: 1;
+  transform: rotate(405deg);
+}
+input:checked + label span:last-child {
+  opacity: 1;
+  transform: rotate(-405deg);
+}
+
+nav {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 66px;
+}
+nav div {
+  background-image: url(img/logo.png);
+  width: 158px;
+  height: 19px;
+}
+
+ul {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+ul li {
+  display: block;
+  list-style: none;
+  text-transform: uppercase;
+}
+ul a {
+  text-decoration: none;
+  color: #fff;
+}
+ul a:hover {
+  color: red;
+}
+
+#toggle {
+  display: none;
+}
+
+header {
+  background: url(img/pic.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+header * {
+  padding-bottom: 20px;
+}
+header h1 {
+  font-size: 4.28em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header p {
+  font-size: 1.5em;
+  font-weight: 200px;
+  font-weight: lighter;
+}
+header a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  line-height: 3.4em;
+  width: 166px;
+  height: 49px;
+  text-align: center;
+  padding: 0;
+}
+header a:hover {
+  background-color: #ca0500;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.wrapper {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+section {
+  justify-content: center;
+  display: flex;
+}
+section h1 {
+  font-size: 2.5em;
+  padding-bottom: 15px;
+}
+section h2 {
+  font-size: 1.57em;
+  font-style: italic;
+  line-height: 1em;
+  padding-top: 10px;
+  font-weight: 100;
+}
+section p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  padding-top: 10px;
+}
+section .line {
+  height: 2px;
+  width: 40px;
+  background: red;
+  border: none;
+  margin: 10px 0;
+}
+
+.information_about_tesla {
+  height: 700px;
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  flex-shrink: 2;
+}
+
+.section_investors_overviev {
+  height: 700px;
+  display: flex;
+  padding-left: 80px;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(95deg, white 16%, #0f0f0f 15%, #0f0f0f 22%, #101010 22%, #101010 29%, #111111 29%, #111111 36%, #121212 36%, #121212 43%, #131313 43%, #131313 50%, #141414 57%, #141414 64%, #151515 64%, #151515 71%, #171717 71%, #171717 78%, #181818 78%, #181818 85%, #191919 85%, #191919 92%, #1a1a1a 92%, #1a1a1a 100%);
+  background-repeat: no-repeat;
+  background-position: cover;
+  color: #fff;
+}
+
+footer {
+  padding: 10px 50px;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #fff;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer .footer_column {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer_column * {
+  padding-top: 15px;
+}
+footer .footer_column a {
+  text-decoration: none;
+  color: #999999;
+}
+footer .footer_column a:hover {
+  color: #fff;
+}
+footer .footer_column h1 {
+  padding: 20px 0 10px 0;
+  border-bottom: 2px solid #1a1a1a;
+  text-transform: uppercase;
+}
+footer .footer_column p {
+  color: #999999;
+  padding-top: 10px;
+}
+footer .socials * {
+  padding: 0;
+}
+footer .socials a {
+  margin: 20px 10px 25px 0;
+  padding: 14px 0 0 14px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #000;
+  width: 33px;
+  height: 33px;
+  font-size: 1.3em;
+}
+footer .socials a:hover {
+  color: red;
+}
+footer .socials .social {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  flex-direction: column;
+  text-align: left;
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+}
+.about h1 {
+  padding-top: 50px;
+}
+.about span {
+  font-size: 1.2em;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.3em;
+  width: 70%;
+  margin: 0 auto;
+}
+.about p {
+  padding: 30px 0;
+}
+.about .pic {
+  background: url(img/car.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 400px;
+}
+.about .lineWrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0 0 0;
+}
+.about .lineWrapper p {
+  font-size: 4.28em;
+  font-weight: 400;
+  padding: 0 40px;
+}
+.about .horizontalLine {
+  width: 100%;
+  margin: 30px 0 0 0;
+  height: 0.5px;
+  background: #aaa;
+}
+.about p:last-child {
+  padding-bottom: 100px;
+}
+
+.contact {
+  display: flex;
+  height: 700px;
+}
+.contact .contactUs {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 100px;
+}
+.contact p {
+  text-transform: uppercase;
+  color: #000;
+}
+.contact span {
+  color: #888;
+  padding: 0 0 25px 0;
+}
+
+@media screen and (min-width: 715px) {
+  footer {
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .section_investors_overviev {
+    background: linear-gradient(95deg, white 9%, #0f0f0f 9%, #0f0f0f 22%, #101010 22%, #101010 29%, #111111 29%, #111111 36%, #121212 36%, #121212 43%, #131313 43%, #131313 50%, #141414 57%, #141414 64%, #151515 64%, #151515 71%, #171717 71%, #171717 78%, #181818 78%, #181818 85%, #191919 85%, #191919 92%, #1a1a1a 92%, #1a1a1a 100%);
+  }
+
+  .main_section_info h1 {
+    font-size: 2.2em;
+  }
+  .main_section_info h2 {
+    font-size: 1.4em;
+  }
+  .main_section_info p {
+    font-size: 1.1em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .main_section_info h1 {
+    font-size: 2em;
+  }
+  .main_section_info h2 {
+    font-size: 1.2em;
+  }
+  .main_section_info p {
+    font-size: 1em;
+  }
+  .main_section_info .line {
+    left: -155px;
+  }
+}
+@media screen and (max-width: 790px) {
+  .main_section_info {
+    flex-wrap: wrap;
+  }
+
+  .information_about_tesla {
+    width: 100%;
+  }
+
+  .section_investors_overviev {
+    background: #000;
+    padding-left: 10px;
+    width: 100%;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+  }
+
+  header h1 {
+    font-size: 3em;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+  .contact .contactUs {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 0;
+  }
+  .contact .contactUs .line {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .burger {
+    display: inline;
+  }
+
+  header {
+    background: url(img/smallscreen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  input ~ nav {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 66px;
+    z-index: 3;
+    transition: .5s;
+    transition-delay: .5s;
+    overflow: hidden;
+  }
+
+  input:checked ~ nav {
+    height: 300px;
+    transition-delay: 0s;
+  }
+  input:checked ~ nav > ul > li {
+    opacity: 1;
+    transition-delay: .5s;
+  }
+
+  ul {
+    text-align: center;
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+    position: absolute;
+    top: 30%;
+  }
+  ul > li {
+    opacity: 0;
+    transition: 0;
+    transition-delay: 0s;
+  }
+
+  nav {
+    height: 300px;
+    flex-direction: column;
+  }
+  nav div {
+    position: fixed;
+    left: 40px;
+    top: 20px;
+  }
+}
+@media screen and (max-width: 510px) {
+  header h1 {
+    font-size: 2em;
+  }
+  header p {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 601px) {
+  .burger {
+    display: none;
+  }
+
+  #burger {
+    display: none;
+  }
+}
