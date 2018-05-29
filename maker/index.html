@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+</head>
+<body>
+	<header>
+		<input type="checkbox" id="hmt" class="hidden-menu-ticker">
+		<label class="btn-menu" for="hmt">
+			<span class="first"></span>
+			<span class="third"></span>
+		</label>
+
+		<ul class="hidden-menu" id="menu">
+			<li><a href="#mission">mission</a></li>
+			<li><a href="#projects">projects</a></li>
+			<li><img src="img/logo.png" alt="" class="img"></li>
+			<li><a href="#team">team</a></li>
+			<li><a href="#event">event</a></li>
+		</ul>
+
+	</header>
+	<section class="head">
+		<h1>we build innovative companies</h1>
+	</section>
+
+
+	<section class="mission" id="mission">
+		<p class="number">01</p><span class="rotate">mission</span>
+		<p>Is allowance instantly strangers applauded discourse so. Separate entrance welcomed sensible laughing why one moderate shy. We seeing piqued garden he. As in merry at forth least ye stood. 
+		</p>
+		<p>And cold sons yet with. Delivered middleton therefore me at. Attachment companions man way excellence how her pianoforte.
+		</p>
+		<img src="img/1.png" alt="">
+	</section>
+
+
+	<section class="projects" id="projects">
+		<div class="projectsLetter-wrap">
+			<p>02</p>
+			<span>projects</span>
+		</div>
+		<div class="image-wrap">
+			<img src="img/strategy.png" alt="">
+			<img src="img/headphones.png" alt="">
+			<img src="img/badminton.png" alt="">
+			<img src="img/american and football.png" alt="">
+			<img src="img/sun stone.png" alt="">
+			<img src="img/sixth  planet.png" alt="">
+		</div>
+		<p class="letter">R</p>
+	</section>
+
+
+	<section class="team" id="team">
+		<div>
+			<p>03</p>
+			<span class="title">team</span>
+		</div>
+		<div class="person">
+			<!-- <img src="img/photo4.png" alt="" width="670px" height="670px"> -->
+			<span class="riska"></span>
+			<h1>George M.Bryson</h1>
+			<h2>Founder & Group CEO</h2>
+			<p>Ladyship it daughter securing procured or am moreover mr. Put sir she exercise vicinity cheerful wondered. Continual say suspicion provision you neglected sir curiosity unwilling. </p>
+			<p>Simplicity end themselves increasing led day sympathize yet. General windows effects not are drawing man garrets.</p>
+		</div>
+		<div class="let">T</div>
+		<div class="person1">
+			<span class="riska"></span>
+			<h1>Kenneth G. Gilmore</h1>
+			<h2>Business Manager</h2>
+		</div>
+		<div class="person2">
+			<span class="riska"></span>
+			<h1>Richard C. Main</h1>
+			<h2>Маrketing & Communication Manager</h2>
+		</div>
+		<div class="person3">
+			<span class="riska"></span>
+			<h1>Judith R. Flynn</h1>
+			<h2>International Executive Director</h2>
+		</div>
+		<div class="person4">
+			<span class="riska"></span>
+			<h1>Donald S. Thompson</h1>
+			<h2>Finance Director</h2>
+		</div>
+	</section>
+
+
+	<section class="event" id="event">
+		<div class="event__number">
+			<p>04</p>
+			<span class="title">event</span>
+		</div>
+		<div class="event-wrapper">
+		<div class="event-wrapper__text">
+			<h1>Feel emotions</h1>
+			<p>One purse as fully me or point. Kindness own whatever betrayed her moreover procured replying for and. Proposal indulged no do do sociable he throwing settling. Covered ten nor comfort offices carried. 
+			</p>
+			<p>Age she way earnestly the fulfilled extremely. Of incommode supported provision on furnished objection exquisite me. </p>
+		</div>
+		<div class='event-wrapper__letter'>
+			E
+		</div>
+		</div>
+		
+		<footer>
+		<img src="img/logo.png" alt="">
+		<a href="#">About</a>
+		<a href="#">Faq</a>
+		<a href="#">Blog</a>
+		<a href="#">Tour</a>
+		<a href="#">Contact</a>
+		<p>© 2016 Maker. All rights reserved</p>
+	</footer>
+	</section>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#menu").on("click",'a', function (event) {
+				event.preventDefault();
+				var id  = $(this).attr('href'),
+				top = $(id).offset().top;
+				$('body,html').animate({scrollTop: top}, 1500);
+			});
+		});
+	</script>
+
+		
+
+
+</body>
+</html>
