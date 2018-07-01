@@ -1,0 +1,241 @@
+body {
+  background: white;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: #494949;
+  overflow-x: hidden; }
+
+img {
+  margin-bottom: 30px; }
+
+h2 {
+  margin-bottom: 50px;
+  font-weight: 300;
+  font-size: 30px; }
+
+.container {
+  max-width: 1170px;
+  overflow-x: hidden; }
+
+.header-nav {
+  height: 80px;
+  text-align: center; }
+  .header-nav a {
+    text-decoration: none;
+    color: #494949;
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: center;
+    padding-right: 50px; }
+  .header-nav a:hover {
+    color: #637ab4; }
+
+.header-image {
+  background: url(../img/ian-froome-375650.jpg);
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  height: 161px; }
+  .header-image h1 {
+    color: black;
+    font-size: 70px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 0px;
+    margin-top: 163px;
+    -webkit-box-shadow: 0px 0px 75px 50px white;
+            box-shadow: 0px 0px 75px 50px white; }
+
+.personal-info {
+  text-align: center;
+  margin-top: 80px; }
+  .personal-info icon {
+    width: 15px;
+    height: 15px; }
+  .personal-info input {
+    margin-bottom: 25px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: #000;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    width: 100%;
+    border: 1px solid #e5e5e5; }
+  .personal-info input:focus {
+    border-color: #435993;
+    -webkit-border-radius: 5px;
+            border-radius: 5px; }
+  .personal-info label {
+    font-size: 24px; }
+  .personal-info .form-item {
+    vertical-align: top;
+    position: relative; }
+  .personal-info .form-label {
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    top: 14%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    line-height: 40px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    color: #c8c8c8; }
+  .personal-info .form-input:focus ~ .form-label,
+  .personal-info .form-input:not(:focus):valid ~ .form-label {
+    top: -10px;
+    font-size: 14px; }
+  .personal-info .choise {
+    width: 93%;
+    height: 60px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    line-height: 60px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #c8c8c8;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+            border-radius: 5px; }
+  .personal-info .year::-webkit-scrollbar {
+    width: 4px;
+    padding-right: 2px; }
+  .personal-info .year::-webkit-scrollbar-thumb {
+    background: #d9d9d9; }
+  .personal-info .year {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: none;
+    padding: 0;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 301px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    top: 52.5%;
+    left: 26%;
+    background-color: white;
+    z-index: 999;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+    .personal-info .year p {
+      padding: 10px 0;
+      cursor: pointer;
+      display: block;
+      widows: 100%;
+      margin-bottom: 0;
+      color: #435993;
+      font-size: 20px; }
+    .personal-info .year p:hover {
+      background: #eee; }
+  .personal-info .year-active {
+    display: block;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+  .personal-info .select {
+    position: relative;
+    top: 25px;
+    left: 44%;
+    height: 10px;
+    width: 10px;
+    border-right: 2px solid #435993;
+    border-bottom: 2px solid #435993;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    z-index: 1000;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    cursor: pointer; }
+  .personal-info .select-active {
+    -webkit-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+            transform: rotate(225deg);
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+
+.experience {
+  margin-top: 50px; }
+  .experience div:first-child {
+    text-align: center; }
+  .experience label {
+    cursor: pointer;
+    padding-left: 25px; }
+  .experience label:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+    position: absolute;
+    left: 0px;
+    background-color: #fff;
+    border: 1px solid #000; }
+  .experience label:hover:before {
+    background-color: #e9efff; }
+  .experience input[type="checkbox"] {
+    display: none; }
+  .experience input[type=checkbox]:checked + label:before {
+    content: "\f107";
+    /*\2713*/
+    font-size: 18px;
+    color: #fff;
+    font-family: fontawesome;
+    text-align: center;
+    line-height: 15px;
+    font-weight: bold;
+    background-color: #435993; }
+
+.about {
+  margin-top: 50px;
+  text-align: center; }
+  .about p {
+    padding-bottom: 30px; }
+  .about textarea {
+    width: 100%;
+    height: 180px;
+    resize: none;
+    font-size: 20px;
+    padding: 20px 0 0 15px;
+    border: 1px solid #e5e5e5; }
+
+.btn {
+  margin: 60px auto;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  background-color: #435993;
+  width: 116px;
+  height: 51px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300; }
+
+@media screen and (max-width: 480px) {
+  .personal-info .form-label {
+    font-size: 17px; }
+  .personal-info .choise {
+    font-size: 17px; }
+  .personal-info .year {
+    left: 15px;
+    width: 93%; }
+  .personal-info .select {
+    left: 87%; }
+  .header-nav a {
+    display: block;
+    padding: 0; } }
+
+@media screen and (min-width: 481px) and (max-width: 580px) {
+  .personal-info .select {
+    left: 87%; } }

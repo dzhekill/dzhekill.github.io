@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Анкета</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+
+	<div class="container">
+		<div class="row align-items-center header-nav justify-content-center">
+			<div class="col-12">
+				<a href="#personal">личная информация</a>
+				<a href="#experience">опыт</a>
+				<a href="#about">о себе</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="header-image col">
+				<h1>Анкета</h1>
+			</div>
+		</div>
+		<form action="action_page.php" method="get">
+		<div class="personal-info row justify-content-center" id="personal">
+			<div class="col col-lg-6">
+				<img src="img/icon.svg" alt="">
+				<h2>Личная информация</h2>
+				<div class="form-item">
+					<input type="name" class="form-input" required> <label for=""class="form-label">ФИО</label>
+				</div>
+				<div class="row justify-content-center">
+					<div class="select"></div>
+					<div class="  col-sm-6 choise">Год рождения</div>
+					<div class="  col-sm-6 year">
+						<p>1981</p>
+						<p>1982</p>
+						<p>1983</p>
+						<p>1984</p>
+						<p>1985</p>
+						<p>1986</p>
+						<p>1987</p>
+						<p>1988</p>
+						<p>1989</p>
+						<p>1990</p>
+						<p>1991</p>
+						<p>1992</p>
+						<p>1993</p>
+						<p>1994</p>
+						<p>1995</p>
+						<p>1996</p>
+						<p>1997</p>
+						<p>1998</p>
+						<p>1999</p>
+						<p>2000</p>
+					</div>
+				</div>
+				<div class="form-item">
+					<input type="text" class="form-input" required><label class="form-label">Место проживания</label>
+				</div>
+				<div class="form-item">
+					<input type="text" class="form-input" required><label class="form-label">Skype</label>
+				</div>
+				<div class="form-item">
+					<input type="text" class="form-input" required><label class="form-label">E-mail</label>
+				</div>
+			</div>
+		</div>
+		<div class="row experience justify-content-center" id="experience">
+			<div class="col-md-12" >
+				<img src="img/Shape.svg" alt="">
+				<h2>Расскажите о своем опыте</h2>
+			</div>
+			<div class=" col-md-4 col-lg-3" >
+				<input type="checkbox" id="bem"><label for="bem">БЭМ/OOCSS</label><br>
+				<input type="checkbox" id="scss"><label for="scss">Stylus/Less/SASS</label> <br>
+				<input type="checkbox" id="SVG"><label for="SVG">Paботаю с SVG</label> <br>
+			</div>
+			<div class=" col-md-4 col-lg-3">
+				<input type="checkbox" id="sem"><label for="sem">Верстаю семантично</label><br>
+				<input type="checkbox" id="es2015"><label for="es2015">ES2015/ES2016</label><br>
+				<input type="checkbox" id="gulp"><label for="gulp">Gulp/GRUNT</label><br>
+			</div>
+			<div class=" col-md-3 col-lg-2">
+				<input type="checkbox" id="pack"><label for="pack">Webpack</label><br>
+				<input type="checkbox" id="jquery"><label for="jquery">JQuery </label><br>
+				<input type="checkbox" id="git"><label for="git">Использую Git</label><br>
+			</div>
+		</div>
+		
+		<div class="about row justify-content-center" id="about">
+			<div class="col-md-9 col-lg-6">
+				<img src="img/icon1.svg" alt="">
+				<h2>Расскажите о себе</h2>
+				<p>Напишите несколько предложений, чем привлекла наша вакансия
+				и что вы ожидаете от работы у нас.</p>
+				<textarea placeholder="Понравилась тем, что..."></textarea>
+			</div>
+		</div>
+		<div class="row"><input type="submit" class="btn" value='Готово'></div>
+	</div>
+	</form>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="js/common.js"></script>
+
+</body>
+</html>
